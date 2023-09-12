@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { app, validateJwt } = require('.')
 
 const User = mongoose.model('User', {
     email: { type: String, require: true  },
@@ -6,3 +7,4 @@ const User = mongoose.model('User', {
     salt: { type: String, required: true },
 })
 module.exports = User
+
